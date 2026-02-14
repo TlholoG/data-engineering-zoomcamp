@@ -27,3 +27,4 @@ volumes:
   pgadmin_data:
 
 
+# This was the introductions of docker compose 02_workflow-orchestration is more extensive
