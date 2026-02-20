@@ -63,6 +63,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - kestra_tmp:/tmp/kestra-wd
     environment:
+      SECRET_GEMINI_API_KEY: ${SECRET_GEMINI_API_KEY}    
       KESTRA_CONFIGURATION: |
         datasources:
           postgres:
@@ -81,11 +82,6 @@ services:
             type: local
             local:
               basePath: "/app/storage"
-          ai:
-            type: gemini
-            gemini:
-              model-name: gemini-2.5-flash
-              api-key: ${GEMINI_API_KEY}
           queue:
             type: postgres
           tasks:
