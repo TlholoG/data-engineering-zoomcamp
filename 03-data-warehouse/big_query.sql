@@ -23,9 +23,14 @@ PARTITION BY
 SELECT * FROM kestra-sandbox-487614.zoomcamp.external_yellow_tripdata;
 
 -- Impact of partition
--- Scanning 1.6GB of data
+-- Scanning 440.86MB of data
 SELECT DISTINCT(VendorID)
-FROM kestra-sandbox-487614.zoomcamp.yellow_tripdata_non_partitioned
+FROM `kestra-sandbox-487614.zoomcamp.yellow_tripdata_non_partitioned`
+WHERE DATE(tpep_pickup_datetime) BETWEEN '2019-06-01' AND '2019-06-30';
+
+-- Scanning ~464 B of DATA
+SELECT DISTINCT(VendorID)
+FROM `kestra-sandbox-487614.zoomcamp.yellow_tripdata_partitioned`
 WHERE DATE(tpep_pickup_datetime) BETWEEN '2019-06-01' AND '2019-06-30';
 
 -- Let's look into the partitions
@@ -33,3 +38,21 @@ SELECT table_name, partition_id, total_rows
 FROM `zoomcamp.INFORMATION_SCHEMA.PARTITIONS`
 WHERE table_name = 'yellow_tripdata_partitioned'
 ORDER BY total_rows DESC;
+
+-- Creating a partition and cluster table
+CREATE OR REPLACE TABLE kestra-sandbox-487614.zoomcamp.yellow_tripdata_partitioned_clustered
+PARTITION BY DATE(tpep_pickup_datetime)
+CLUSTER BY VendorID AS
+SELECT * FROM kestra-sandbox-487614.zoomcamp.external_yellow_tripdata;
+
+-- Query scans 97.23 MB
+SELECT count(*) as trips
+FROM kestra-sandbox-487614.zoomcamp.yellow_tripdata_partitioned
+WHERE DATE(tpep_pickup_datetime) BETWEEN '2019-06-01' AND '2020-12-31'
+  AND VendorID=1;
+
+-- Query scans 78.18 MB
+SELECT count(*) as trips
+FROM kestra-sandbox-487614.zoomcamp.yellow_tripdata_partitioned_clustered
+WHERE DATE(tpep_pickup_datetime) BETWEEN '2019-06-01' AND '2020-12-31'
+  AND VendorID=1;
