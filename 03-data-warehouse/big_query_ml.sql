@@ -30,3 +30,34 @@ FROM
 `kestra-sandbox-487614.zoomcamp.yellow_tripdata_ml`
 WHERE
 tip_amount IS NOT NULL;
+
+-- CHECK FEATURES
+SELECT * FROM ML.FEATURE_INFO(MODEL `kestra-sandbox-487614.zoomcamp.tip_model`);
+
+-- EVALUATE THE MODEL
+SELECT
+*
+FROM
+ML.EVALUATE(MODEL `kestra-sandbox-487614.zoomcamp.tip_model`,
+(
+SELECT
+*
+FROM
+`kestra-sandbox-487614.zoomcamp.yellow_tripdata_ml`
+WHERE
+tip_amount IS NOT NULL
+));
+
+-- PREDICT THE MODEL
+SELECT
+*
+FROM
+ML.PREDICT(MODEL `kestra-sandbox-487614.zoomcamp.tip_model`,
+(
+SELECT
+*
+FROM
+`kestra-sandbox-487614.zoomcamp.yellow_tripdata_ml`
+WHERE
+tip_amount IS NOT NULL
+));
