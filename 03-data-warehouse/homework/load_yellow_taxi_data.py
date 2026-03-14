@@ -13,8 +13,8 @@ BUCKET_NAME = "kestra-zoomcamp-tlholo-demo"
 # If you authenticated through the GCP SDK you can comment out these two lines
 # CREDENTIALS_FILE = "gcs.json"
 # client = storage.Client.from_service_account_json(CREDENTIALS_FILE)
-# If commented initialize client with the following
-client = storage.Client(project='zoomcamp-mod3-datawarehouse')
+# If commented initialize client with the following 
+client = storage.Client(project="kestra-sandbox-487614")
 
 
 BASE_URL = "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-"
@@ -48,7 +48,7 @@ def create_bucket(bucket_name):
         bucket = client.get_bucket(bucket_name)
 
         # Check if the bucket belongs to the current project
-        project_bucket_ids = [bckt.id for bckt in client.list_buckets()]
+        project_bucket_ids = [bckt.name for bckt in client.list_buckets()]
         if bucket_name in project_bucket_ids:
             print(
                 f"Bucket '{bucket_name}' exists and belongs to your project. Proceeding..."
