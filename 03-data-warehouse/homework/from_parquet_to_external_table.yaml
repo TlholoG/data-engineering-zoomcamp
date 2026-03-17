@@ -1,7 +1,7 @@
-id: upload_parquet_taxi_files
+id: load_parquet_to_table
 namespace: zoomcamp
 description: |
-  The CSV Data used in the course: https://github.com/DataTalksClub/nyc-tlc-data/releases
+  Homework takes parquet files in google bucket makes external table in BigQuery
 
 inputs:
   - id: taxi
