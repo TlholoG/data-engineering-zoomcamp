@@ -54,9 +54,28 @@ Use the materialized table you created earlier in your from clause and note the 
 
 Choose the answer which most closely matches.
 
-   12.47 MB for non-partitioned table and 326.42 MB for the partitioned table
-   310.24 MB for non-partitioned table and 26.84 MB for the partitioned table
-   5.87 MB for non-partitioned table and 0 MB for the partitioned table
-   310.31 MB for non-partitioned table and 285.64 MB for the partitioned table
+      12.47 MB for non-partitioned table and 326.42 MB for the partitioned table
+   ** 310.24 MB for non-partitioned table and 26.84 MB for the partitioned table
+      5.87 MB for non-partitioned table and 0 MB for the partitioned table
+      310.31 MB for non-partitioned table and 285.64 MB for the partitioned table
 
-   
+Question 7. External table storage
+Where is the data stored in the External Table you created?
+
+     Big Query
+     Container Registry
+**   GCP Bucket
+     Big Table
+
+Question 8. Clustering best practices
+It is best practice in Big Query to always cluster your data:
+
+   True
+** False
+
+Question 9. Understanding table scans
+No Points: Write a SELECT count(*) query FROM the materialized table you created. How many bytes does it estimate will be read? Why?
+
+** 0B
+0 B, because BigQuery uses table metadata to compute COUNT(*) without scanning the underlying data,
+BigQuery does NOT need to scan the table data to compute COUNT(*).

@@ -25,6 +25,11 @@ FROM `kestra-sandbox-487614.zoomcamphomework.yellow_tripdata`
 WHERE tpep_dropoff_datetime > '2024-03-01'
 AND  tpep_dropoff_datetime <= '2024-03-15';
 
+SELECT  DISTINCT(VendorID) 
+FROM `kestra-sandbox-487614.zoomcamphomework.yellow_tripdata_partitioned` 
+WHERE tpep_dropoff_datetime > '2024-03-01'
+AND  tpep_dropoff_datetime <= '2024-03-15';
+
 Question 7.
 
 
