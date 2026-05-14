@@ -66,7 +66,7 @@ tasks:
           dropoff_datetime TIMESTAMP OPTIONS (description = 'The date and time when the meter was disengaged'),
           PULocationID STRING OPTIONS (description = 'TLC Taxi Zone in which the taximeter was engaged'),
           DOLocationID STRING OPTIONS (description = 'TLC Taxi Zone in which the taximeter was disengaged'),
-          SR_Flag STRING OPTIONS(),
+          SR_Flag STRING OPTIONS(description = 'The SR Flag'),
           Affiliated_base_number STRING OPTIONS (description = 'The Affiliated base number')
       )
       OPTIONS (
@@ -103,7 +103,10 @@ tasks:
         INSERT (unique_row_id, filename, dispatching_base_num , pickup_datetime, dropoff_datetime, PULocationID , DOLocationID , SR_Flag , Affiliated_base_number)
         VALUES (S.unique_row_id, S.filename, S.dispatching_base_num , S.pickup_datetime, S.dropoff_datetime, S.PULocationID , S.DOLocationID , S.SR_Flag , S.Affiliated_base_number);
 
-
+  - id: purge_files
+    type: io.kestra.plugin.core.storage.PurgeCurrentExecutionFiles
+    description: To avoid cluttering your storage, we will remove the downloaded files
+    disabled: false
 
 pluginDefaults:
   - type: io.kestra.plugin.gcp
