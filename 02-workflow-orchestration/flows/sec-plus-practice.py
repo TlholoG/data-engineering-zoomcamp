@@ -1,4 +1,4 @@
-
+"""
 76)[Verified]
 Select the appropriate attack and remediation from each drop-down list to label the corresponding attack with its remediation.
 
@@ -291,8 +291,17 @@ Timestamp             Source         Destination    Destination Port  Applicatio
 10.10.9.12; Origin, Infected, *Clean
 10.10.9.18; Origin, *Infected, Clean
 
+78) 
+Which of the following is the phase in the incident response process when a security analyst reviews roles and responsibilities?
+C. Lessons learned
 
+79)
+After a recent vulnerability scan, a security engineer needs to harden the routers within the corporate network. 
+Which of the following is the most appropriate to disable?
+D. Web-based administration
 
-
+80)A security administrator needs a method to secure data in an environment that includes some form of checks so track any changes. 
+Which of the following should the administrator set up to achieve this goal?
+D. FIM (File Integrity Monitoring)
 
 """
