@@ -300,8 +300,56 @@ After a recent vulnerability scan, a security engineer needs to harden the route
 Which of the following is the most appropriate to disable?
 D. Web-based administration
 
-80)A security administrator needs a method to secure data in an environment that includes some form of checks so track any changes. 
+80)
+A security administrator needs a method to secure data in an environment that includes some form of checks so track any changes. 
 Which of the following should the administrator set up to achieve this goal?
 D. FIM (File Integrity Monitoring)
+
+81)
+
+An administrator is reviewing a single server's security logs and discovers the following:
+Keywords        Date and Time            Source                      Event ID   Task Category
+Audit Failure   09/16/2022 11:13:05 AM   Microsoft Windows Security  4625       Logon
+Audit Failure   09/16/2022 11:13:07 AM   Microsoft Windows Security  4625       Logon
+Audit Failure   09/16/2022 11:13:09 AM   Microsoft Windows Security  4625       Logon
+Audit Failure   09/16/2022 11:13:11 AM   Microsoft Windows Security  4625       Logon
+Audit Failure   09/16/2022 11:13:13 AM   Microsoft Windows Security  4625       Logon
+Audit Failure   09/16/2022 11:13:15 AM   Microsoft Windows Security  4625       Logon
+Audit Failure   09/16/2022 11:13:17 AM   Microsoft Windows Security  4625       Logon
+Audit Failure   09/16/2022 11:13:19 AM   Microsoft Windows Security  4625       Logon
+Audit Failure   09/16/2022 11:13:21 AM   Microsoft Windows Security  4625       Logon
+Audit Failure   09/16/2022 11:13:23 AM   Microsoft Windows Security  4625       Logon
+Audit Failure   09/16/2022 11:13:25 AM   Microsoft Windows Security  4625       Logon
+Audit Failure   09/16/2022 11:13:27 AM   Microsoft Windows Security  4625       Logon
+
+Which of the following best describes the action captured in this log file?
+
+82)
+A security engineer is implementing FDE for all laptops in an organization. 
+Which of the following are the most important for the engineer to consider as part of the planning process? (Choose two.)
+
+A. Key escrow
+B. TPM presence
+
+83)
+A security analyst scans a company's public network and discovers a host is running a remote desktop that can be used to access the production network. 
+Which of the following changes should the security analyst recommend?
+
+B. Setting up a VPN and placing the jump server inside the firewall
+
+84)
+An enterprise has been experiencing attacks focused on exploiting vulnerabilities in older browser versions with well-known exploits. 
+Which of the following security solutions should be configured to best provide the ability to monitor and block these known signature-based attacks?
+
+D. IPS (Intrusion Prevention System) → Detects and actively blocks attacks using signatures.
+
+
+
+
+
+
+
+
+
 
 """
