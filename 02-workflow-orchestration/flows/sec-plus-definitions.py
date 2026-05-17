@@ -27,6 +27,27 @@ Detects and alerts on attacks (including signature-based), but does NOT block th
 IPS: Intrusion Prevention System 
 Detects and actively blocks attacks using signatures.
 
+CSR: Certificate Signing Request  
+Used to request a certificate, not validate it
+
+CA: Certificate Authority  
+Issues certificates, doesn’t perform live validation
+
+CRC: Cyclic Redundancy Check  
+Error-checking for data
 
 
+OCSP: Online Certificate Status Protocol
+Verifies whether a certificate is valid, revoked, or expired,Works in real time when a certificate is presented
 
+CVE: Common Vulnerabilities and Exposures
+Unique identifier for publicly known security vulnerabilities.
+    
+CVSS: Common Vulnerability Scoring System 
+Numerical scoring system measuring vulnerability severity (0–10).
+                                                           
+CIA: Confidentiality, Integrity, Availability
+Core principles ensuring data security and system reliability.
+
+CERT: Computer Emergency Response Team
+Organization that responds to and manages cybersecurity incidents.

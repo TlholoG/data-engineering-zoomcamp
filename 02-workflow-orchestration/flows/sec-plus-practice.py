@@ -343,13 +343,96 @@ Which of the following security solutions should be configured to best provide t
 
 D. IPS (Intrusion Prevention System) → Detects and actively blocks attacks using signatures.
 
+85)
+Security controls in a data center are being reviewed to ensure data is properly protected and that human life considerations are included. 
+Which of the following best describes how the controls should be set up?
 
+C. Safety controls should fail open
 
+86)
+Which of the following would be best suited for constantly changing environments?
 
+B. Containers
 
+87)
+Which of the following incident response activities ensures evidence is properly handled?
 
+88)
+An accounting clerk sent money to an attacker's bank account after receiving fraudulent instructions to use a new account. 
+Which of the following would most likely prevent this activity in the future?
 
+D. Updating processes for sending wire transfers
 
+89)
+A systems administrator is creating a script that would save time and prevent human error when performing account creation for a large number of end users. 
+Which of the following would be a good use case for this task?
+
+B. Orchestration
+
+90)
+A company's marketing department collects, modifies, and stores sensitive customer data. The infrastructure team is responsible for securing the data while in transit and at rest. 
+Which of the following data roles describes the customer?
+
+C. Subject
+
+91)
+Which of the following describes the maximum allowance of accepted risk?
+
+D. Risk threshold
+
+92)
+A security analyst receives alerts about an internal system sending a large amount of unusual DNS queries to systems on the internet over short periods of time during non-business hours. 
+Which of the following is most likely occurring?
+
+B. Data is being exfiltrated.
+
+93) [Verified]
+A technician is opening ports on a firewall for a new system being deployed and supported by a SaaS provider. 
+Which of the following is a risk in the new system?
+
+C. Supply chain vendor
+
+94)
+A systems administrator is working on a solution with the following requirements:
+•Provide a secure zone.
+•Enforce a company-wide access control policy.
+•Reduce the scope of threats.
+Which of the following is the systems administrator setting up?
+
+A. Zero Trust
+
+95)
+Which of the following involves an attempt to take advantage of database misconfigurations?
+
+B. SQL injection
+
+96)
+Which of the following is used to validate a certificate when it is presented to a user?
+
+A. OCSP (Online Certificate Status Protocol)
+
+97)
+One of a company's vendors sent an analyst a security bulletin that recommends a BIOS update. 
+Which of the following vulnerability types is being addressed by the patch?
+
+B. Firmware
+
+98)
+Which of the following is used to quantitatively measure the criticality of a vulnerability?
+
+B. CVSS (Common Vulnerability Scoring System)  Provides a numerical severity score
+
+99)
+Which of the following actions could a security engineer take to ensure workstations and s
+ervers are properly monitored for unauthorized changes and software?
+
+D. Install endpoint management software on all systems
+
+100)
+An organization is leveraging a VPN between its headquarters and a branch location. 
+Which of the following is the VPN protecting?
+
+B. Data in transit
 
 
 """
